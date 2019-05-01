@@ -2381,6 +2381,7 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  border-color: #00897b;
 }
 
 /**
@@ -4886,7 +4887,7 @@ small {
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 24px 24px 5px 24px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -5631,6 +5632,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .waves-effect {
   /*margin-left: 0.2rem;*/
   /*margin-bottom: 1rem;*/
+  margin-top: 1rem;
   margin-right: 1rem;
   position: relative;
   cursor: pointer;
