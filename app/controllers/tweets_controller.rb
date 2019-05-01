@@ -20,7 +20,6 @@ class TweetsController < ApplicationController
 # 会員登録関連
   def signin  # 会員登録画面の表示 をした際のアクション
   end
-# 会員登録フォームの入力内容はどうやって飛ばす？
 
 
 # 新規投稿関連
@@ -34,7 +33,7 @@ class TweetsController < ApplicationController
 # ログイン関連
   def login    # ログイン画面の表示 をした際のアクション
   end
-# ログインフォームの入力内容はどうやって飛ばす？
+  
 
 
 # 投稿の個別表示関連

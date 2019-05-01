@@ -11,11 +11,9 @@
               <!--オプション機能の表示-->
                 <div class="card-action">
                   <%= form_tag("/tweets/#{@tweet.id}", method: :patch ) do %>
-                    <textarea name="text" placeholder="text" rows="10" cols="30">
-                      <%= @tweet.text %>
-                    </textarea>
+                    <textarea name="text" placeholder="text" rows="10" cols="30"><%= @tweet.text %></textarea>
                     <div class="waves-effect waves-light btn white-text">
-                      <input type="submit" value="編集する">
+                      <input type="submit" value="編集する" class="white_text_button">
                     </div>
                   <% end %>
                 </div>
