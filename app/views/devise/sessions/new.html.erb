@@ -1,5 +1,5 @@
 <div class="contents row">
-  <h2>Log in</h2>
+  <h3>ログイン</h3>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -13,12 +13,12 @@
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.label :remember_me %><br />
-        <%= f.check_box :remember_me %>
-      </div>
-    <% end -%>
+    <!--% if devise_mapping.rememberable? -%>-->
+    <!--  <div class="field">-->
+    <!--    %= f.label :remember_me %><br />-->
+    <!--    %= f.check_box :remember_me %>-->
+    <!--  </div>-->
+    <!--% end -%>-->
 
                     <div class="waves-effect waves-light btn white_text_button">
                       <%= f.submit 'ログインする', :class=>"white_text_button" %>
