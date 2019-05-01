@@ -2392,6 +2392,8 @@ button,
 input {
   /* 1 */
   overflow: visible;
+  color: #ffffff;
+  
 }
 
 /**
