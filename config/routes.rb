@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 # diveseのルーティングはこれで規定されている
   devise_for :users
 
+# ルート画面の設定
+  root  'tweets#index'                       #ルートパスの指定
+
 # ホーム画面関連
   get '' => 'tweets#index'                  # ホーム画面の表示
 
