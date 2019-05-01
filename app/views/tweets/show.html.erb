@@ -1,0 +1,38 @@
+<!--<div class="contents row">-->
+  <!--ツイートの見せ方関連のMaterialize-->
+  <!--<div class="row">-->
+    <div class="col">
+        <div class="card">
+          
+          <div class="card-content">
+          <!--詳細画面は誰でも見られる-->
+          <%= @tweet.text %>
+          </div>
+              <!--オプション機能の表示-->
+                <div class="card-action">
+  <!--ユーザーが投稿したツイートのみを対象とする選別機能-->
+                <% if user_signed_in? && current_user.id == @tweet.user_id %>
+                  <!--編集ボタン-->
+                  <div class="waves-effect waves-light btn white-text">
+                    <a href="#"><%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %></a>
+                  </div>
+                  <!--削除ボタン-->
+                  <div class="waves-effect waves-light btn white-text">
+                      <a href="#"><%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete %></a>
+                  </div>
+                <% end %>
+
+                </div>
+
+<!--ツイートの見せ方関連のMaterialize-->
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+  <!--</div>-->
+<!--</div>-->

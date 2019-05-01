@@ -1,22 +1,23 @@
-<div class="contents row">
+<!--<div class="contents row">-->
   <!--ツイートの見せ方関連のMaterialize-->
-  <div class="row">
+  <!--<div class="row">-->
     <div class="col">
         <div class="card">
           
           <div class="card-content">
           <span class="card-title">本文</span>
           </div>
+          
               <!--オプション機能の表示-->
                 <div class="card-action">
-                  <%= form_tag('/tweets', method: :post) do %>
-                    <textarea name="text" placeholder="text" rows="10" cols="30"></textarea>
+                  <%= form_tag("/tweets/#{@tweet.id}", method: :patch ) do %>
+                    <textarea name="text" placeholder="text" rows="10" cols="30"><%= @tweet.text %></textarea>
                     <div class="waves-effect waves-light btn white-text">
-                      <input type="submit" value="投稿する" class="white_text_button">
+                      <input type="submit" value="編集する" class="white_text_button">
                     </div>
                   <% end %>
                 </div>
         </div>
     </div>
-  </div>
-</div>
+  <!--</div>-->
+<!--</div>-->

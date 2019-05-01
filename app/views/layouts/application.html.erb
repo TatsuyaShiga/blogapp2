@@ -4,12 +4,52 @@
     <title>Blogapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <!--余裕があったらノーマライズドもやっとくこと-->
+    <!--%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>-->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+<!--マテリアライズ-->
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+ 
   </head>
 
   <body>
+
+  <nav>
+    <div class="nav-wrapper #00897b teal darken-1">
+      <a href="/" class="brand-logo center">Blog</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+          <li><%= link_to "LogOut", destroy_user_session_path, method: :delete, class: 'post'%></li>
+          <li><a class="post" href="/tweets/new">New</a></li>
+        <% else %>
+          <li><%= link_to "LogIn", new_user_session_path, class: 'post' %></li>
+          <li><%= link_to "SignIn", new_user_registration_path, class: 'post' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+<!--マテリアライズ-->
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+<!--サイトの各ページごとの中身の部分-->
     <%= yield %>
+
+    
   </body>
 </html>

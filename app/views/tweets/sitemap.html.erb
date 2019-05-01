@@ -1,7 +1,8 @@
 <h1>SITE MAP</h1>
+<br>
 
 <!--ホーム画面-->
-<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com/tweets">ホーム画面</a><br><br>
+<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com">ホーム画面</a><br><br>
 タスク
 <ul>
 <li>表示されている投稿に、SHOW,EDIT,DESTROYボタンを実装する</li>
@@ -9,6 +10,7 @@
 <li>ログイン関連機能：SignIn,SignOut,Newボタンで会員状態を遷移できる機能</li>
 <li>CSS：未適用</li>
 </ul>
+<br>
 <br>
 
 <!--会員登録画面-->
@@ -18,13 +20,15 @@
 <li>会員登録機能の実装：詳細な指定は無いが、投稿画面で複雑な情報は求められていない</li>
 </ul>
 <br>
+<br>
 
 <!--新規投稿画面-->
-<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com/new">新規投稿画面</a><br><br>
+<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com/tweets/new">新規投稿画面</a><br><br>
 タスク
 <ul>
 <li>テキストと送信ボタンのみ</li>
 </ul>
+<br>
 <br>
 
 <!--ログイン画面-->
@@ -34,11 +38,22 @@
 <li>会員登録機能の実装：詳細な指定は無いが、投稿画面で複雑な情報は求められていない</li>
 </ul>
 <br>
+<br>
 
 <!--投稿の個別表示画面-->
-<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com/show">投稿の個別表示画面</a>
+<a href="https://fc932853d18f4bd380370fd0ec675c31.vfs.cloud9.ap-southeast-1.amazonaws.com/show">投稿の個別表示画面</a><br>
 タスク
 <ul>
-表示されている投稿：送信ボタン</li>
+<li>表示されている投稿：送信ボタン</li>
 </ul>
+<br>
+<br>
+
+<h2>本ページを削除する際</h2>
+tweets_controller.rbの<br>
+before_action :move_to_index, except: %i[index sitemap]<br>
+を<br>
+before_action :move_to_index, except: :index<br>
+に変更すること。<br>
+
 <br>

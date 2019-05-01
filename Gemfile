@@ -66,3 +66,8 @@ gem 'sprockets', '3.7.2'
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
+
+# Heroku対応
+group :production do
+  gem 'rails_12factor'
+end

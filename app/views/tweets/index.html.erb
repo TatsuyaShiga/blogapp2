@@ -1,5 +1,40 @@
-<div class="contents row" >
+<!--<div class="contents row" >-->
+
+  <!--個々のツイートを表示する-->
   <% @tweets.each do |tweet| %>
-    <p><%= tweet.text %></p>
+
+    <!--投稿内容の表示-->
+    <!--ツイートの見せ方関連のMaterialize-->
+      <!--<div class="row">-->
+        <div class="col">
+          <div class="card">
+            <div class="card-content">
+                <pre><p><%= tweet.text %></p></pre>
+            </div>
+              <!--オプション機能の表示-->
+                <div class="card-action">
+                <!--全てのユーザーが見られる機能-->
+                  <!--詳細ボタン-->
+                  <div class="waves-effect waves-light btn white-text">
+                      <a href="#"><%= link_to '詳細', "/tweets/#{tweet.id}", method: :get %></a>
+                  </div>
+                <!--ユーザーが投稿したツイートのみを対象とする選別機能-->
+                <% if user_signed_in? && current_user.id == tweet.user_id %>
+                  <!--編集ボタン-->
+                  <div class="waves-effect waves-light btn white-text">
+                    <a href="#"><%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %></a>
+                  </div>
+                  <!--削除ボタン-->
+                  <div class="waves-effect waves-light btn white-text">
+                      <a href="#"><%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %></a>
+                  </div>
+                <% end %>
+                </div>
+            </div>
+          </div>
+        </div>
+      <!--</div>-->
+
   <% end %>
-</div>
+
+<!--</div>-->
